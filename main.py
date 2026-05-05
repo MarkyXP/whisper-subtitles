@@ -121,7 +121,6 @@ async def monitor_processing():
             if not pathlib.Path(filepath).exists():
                 continue
             # If the file hasn't changed, process it
-            loguru.logger.info(f"Processing: {filepath}")
             check_and_add_subtitles(filepath)
 
 
