@@ -51,6 +51,7 @@ def check_and_add_subtitles(video_path: str):
     """
     # Skip if it's not a video
     if not video.is_video(video_path):
+        loguru.logger.debug(f"File is not a video: {video_path}")
         return
     # Skip if the video already has subtitles
     if video.has_subtitles(video_path):
